@@ -6,7 +6,7 @@ require 'colorize'
 class AnimalCollection
   attr_reader :animals
 
-  HEADINGS = ['Animal Species', 'Age', 'Sex'].freeze
+  HEADINGS = %w[Animal\ Species Age Sex].freeze
 
   def initialize(animals)
     @animals = animals

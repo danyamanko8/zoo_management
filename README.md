@@ -8,9 +8,10 @@ ZooManagement is a console application for managing zoo. It allows to filter ani
 
 1. Install relevant version of [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 2. `$ gem install terminal-table`
-3. `$ ruby main.rb`
+3. `$ gem install colorize`
+4. `$ ruby main.rb`
 
-### Example usage
+### Example usage (without colorize)
 
 ```
 All Animals:

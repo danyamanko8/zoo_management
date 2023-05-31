@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require 'terminal-table'
+require 'colorize'
 
 class AnimalCollection
   attr_reader :animals
+
+  HEADINGS = ['Animal Species', 'Age', 'Sex'].freeze
 
   def initialize(animals)
     @animals = animals
@@ -23,10 +26,10 @@ class AnimalCollection
 
   def to_table
     Terminal::Table.new do |table|
-      table.headings = ['Animal Species', 'Age', 'Sex']
+      table.headings = HEADINGS.map { |heading| heading.colorize(:blue).bold }
       table.style = { all_separators: true }
       animals.each do |animal|
-        table.add_row([animal.species, animal.age, animal.sex])
+        table.add_row([animal.species.colorize(:red), animal.age, animal.sex.colorize(:green)])
       end
     end
   end

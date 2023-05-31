@@ -1,5 +1,5 @@
 require_relative 'animal'
-require_relative 'animals_collection'
+require_relative 'animal_collection'
 
 all_animals = AnimalCollection.new([
                                      Animal.new('monkey', 3, 'male'),
